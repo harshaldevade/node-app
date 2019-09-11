@@ -15,7 +15,7 @@ const getGeocode = (address, callback) => {
             })
         }
     })
-    console.log(address)
+    //console.log(address)
 }
 
 module.exports = getGeocode
