@@ -1,0 +1,22 @@
+type Query {
+    deciles(input:FilterDecile!):[Decile]
+}
+
+input FilterDecile {
+    submissionmethod:SubmissionMethods!
+    calendarid:Int!
+    measureno:String!
+    certified:Boolean!
+}
+
+enum SubmissionMethods {
+    EHR
+    QCDR
+
+}
+
+type Decile {
+    point:Int
+    rangestart:Float
+    rangeend:Float
+}

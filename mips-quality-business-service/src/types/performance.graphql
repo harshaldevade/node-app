@@ -1,0 +1,120 @@
+scalar Object
+type Query {
+    getMeasurePerformanceAverage(input: InputgetMeasurePerformanceAverage): MeasurePerformanceAverage
+}
+
+
+type Decile {
+    Point:Int
+    RangeStart:Float
+    RangeEnd:Float
+}
+
+type MeasurePerformanceAverage {
+    DecileRange: [Decile]
+
+    """
+    Entity (Practice/Provider/Location) Average for given measure and base on filter
+    """
+    EntityAverage: Float
+
+    """Registry level benchmark"""
+    RegistryBenchmark: Float
+
+    """
+    Color flag to identify/draw performance bar. 1: Green, 2: Amber, 3: Red
+    """
+    EntityComparison: Int
+
+    """
+    Entity (Practice/Provider/Location) for which the performance get calculated
+    """
+    EntityName: String
+
+    """
+    Entity ID(PracticeID/ProviderID/LocationID) for which the performance get calculated
+    """
+    EntityId: String
+
+    """Parent entity id of the entity mentioned above."""
+    ParentEntityId: [Float]
+
+    """Parent entity name of the entity mentioned above."""
+    ParentEntityName: String
+
+    """Measure Id """
+    MeasureId: String
+
+    """Numerator for the given measure based on the filter"""
+    Numerator: Int
+
+    """Denominator for the given measure based on the filter"""
+    Denominator: Int
+
+    """Numerator Exception for the given measure based on the filter"""
+    NumException: Int
+
+    """Numerator Exclusion for the given measure based on the filter"""
+    NumExclusion: Int
+
+    """Numerator Exception for the given measure based on the filter"""
+    DenomException: Int
+
+    """Numerator Exclusion for the given measure based on the filter"""
+    DenomExclusion: Int
+
+    """Registry Average of the given measure based on the filter"""
+    RegistryAverage: Float
+
+    """
+    Entity (Practice/Provider/Location) level Average of the given measure based on the filter
+    """
+    MeasureAverage: Float
+    CMSBenchmark: Float
+}
+
+input InputgetMeasurePerformanceAverage {
+
+    profileonnpi: Boolean!
+    reportingtypeid: Int!
+    """
+    decile input start
+    """
+    submissionmethod: SubmissionMethods!
+    calendarid: Int!
+    measureno: String!
+    certified: Boolean!
+    """
+    decile input end
+    """
+
+    practiceid: String
+    providerid: String
+        
+    DurationFrom: String!
+    DurationTo: String!
+    Flag: String!
+    MeasureId: String!
+    Unit: String
+    IsPatientSpecific: Boolean!
+
+    """
+    Expected values are cms / registry. Default value will be registry.
+    """
+    EntityComparisonFlag: String
+
+    """
+    Following 3 parameters added because of GIQuIC. Not used or will affect output for other registries.
+    """
+    NPI: String
+    ProviderUids: String
+    PracticeUids: String
+    LocationUids: String
+    tinsplitid: Int
+}
+
+
+enum SubmissionMethods {
+    EHR
+    QCDR
+}

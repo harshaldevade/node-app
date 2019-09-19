@@ -1,0 +1,55 @@
+{
+    "measuresetdetails": {
+      "operationName": "",
+      "variables": {},
+      "query": "{\n  measuresetdetails{{inputs}} {\n    id\n listorder\n measures \n { id \n }\n }\n}\n"
+    },
+    "favorites":{
+        "operationName": "",
+        "variables": {},
+        "query": "{\n  favorites{{inputs}} {\n  id\n userid\n measureid\n }\n}\n"
+    },
+    "measuresetdefaults":{
+        "operationName": "",
+        "variables": {},
+        "query": "{\n  measuresetdefaults{{inputs}} {\n  id\n userid\n measuresetid\n }\n}\n"
+    },
+    "measures":{
+        "operationName": "",
+        "variables": {},
+        "query":"{\n  measures{{inputs}} {\n    id\n   type \n}\n }\n"
+    },
+    "measuresetauthorizations":{
+        "operationName": "",
+        "variables": {},
+        "query": "{\n  getUserAuthorizedMeasureSet{{inputs}} {\n    UserAuthorizedEntity {\n      identifierList\n      error\n      errorType\n    }\n  }\n}\n"
+    },
+    "getmeasuresetdetails": {
+        "operationName": "",
+        "variables": {},
+        "query": "{\n  measuresetdetails{{inputs}} {\n    id\n      measureid\n     measures{\n          measureno \n      }\n     }\n}\n"
+    },
+    "getuserauthorizedpractice":{
+        "operationName": "",
+        "variables": {},
+        "query": "{\n  getUserAuthorizedPractices{{inputs}} {\n    UserAuthorizedEntity {\n      identifierList\n      error\n      errorType\n    }\n  }\n}\n"
+    },
+    "getpracticeidbyexternalid":{
+        "operationName": "",
+        "variables": {},
+        "query": "{\n  practice{{inputs}} {\n    id\n  }\n}\n"
+    },
+    "getuserauthorizedsdentity":{
+        "operationName": "",
+        "variables": {},
+        "query": "{\n  getUserAuthorizedSDEntity{{inputs}} {\n    UserAuthorizedEntity {\n      identifierList\n      error\n      errorType\n    }\n  }\n}\n"
+    },
+    "getpracticenamebyexternalid":{
+        "operationName": "",
+        "variables": {},
+        "query": "{\n  practice{{inputs}} {\n    name\n  }\n}\n"
+    }
+}
+
+
+

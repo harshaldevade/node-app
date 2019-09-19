@@ -1,0 +1,36 @@
+type Query{
+    getEpAndEpException(input:getEpAndEpExceptionInput):EpAndEpException
+}
+
+type Mutation{
+    saveEpAndEpException(input:saveEpAndEpExceptionInput):Object
+    deleteEpAndEpException(input:deleteEpAndEpExceptionInput):Object
+}
+
+input saveEpAndEpExceptionInput{
+    profileid:Int!
+    tinsplitid:Int!
+    measureno:String!
+    ep:Int!
+    epexception:String
+}
+
+input getEpAndEpExceptionInput{
+    profileid:Int!
+    tinsplitid:Int!
+    measureno:String!
+}
+
+input deleteEpAndEpExceptionInput{
+     profileid:Int!
+    tinsplitid:Int!
+    measureno:String
+}
+
+type EpAndEpException{
+     profileid:Int
+    tinsplitid:Int
+    measureno:String
+    ep:Int
+    epexception:Int
+}

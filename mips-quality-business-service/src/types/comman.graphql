@@ -1,0 +1,26 @@
+"""Comparision Operator Enum"""
+enum COP {   
+    """Equals """
+   eq
+   """Not Equals """
+   ne
+   """Greater Than """
+   gt
+   """Less Than """
+   lt
+   """Greater Than Equals """
+   ge
+   """Less Than Equals """
+   le
+   """In """
+   in
+   """Not In """
+   ni
+   """Like with ignore case"""
+   like
+}
+"""Logical Operator Enum"""
+enum LOP {
+    AND
+    OR
+}

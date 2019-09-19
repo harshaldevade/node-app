@@ -1,0 +1,84 @@
+scalar Object
+type Query {
+  measures(input: FilterMeasure): [Measure]
+  getqualityscore(input: qualityscoreInput): Score
+}
+
+type Mutation {
+  save_measure(input: MeasureInput!): Object
+  save_qualityscore(input: qualityscoreInput): Score
+}
+
+type Score {
+  qualityscore: Float
+}
+
+type Measure {
+  id: Int
+  profileid: Int
+  tinsplitid: Int
+  measureno: String
+  datasource: String
+  isactive: Boolean
+}
+
+enum MeasureColumns {
+  id
+  profileid
+  measureno
+  datasource
+  isactive
+}
+
+input MeasureOrderBy {
+  column: MeasureColumns!
+  asc: Boolean = true
+}
+
+input FilterMeasure {
+  id: Int
+  profileid: Int
+  tinsplitid: Int
+  measureno: String
+  datasource: String
+  isactive: Boolean
+  criteria: [MeasureCriteria]
+  orderBy: [MeasureOrderBy]
+  """
+  offset says to skip that many rows. offset 0 is the same as omitting the offset.
+  """
+  offset: Int
+  """
+  limit says that many rows will be returned
+  """
+  limit: Int
+}
+
+input MeasureCriteria {
+  column: MeasureColumns!
+  """
+  Comparision Operator
+  """
+  cop: COP!
+  """
+  Logical Operator
+  """
+  lop: LOP
+  value: Object!
+}
+
+input MeasureInput {
+  id: Int
+  profileid: Int!
+  tinsplitid: Int!
+  measureno: String!
+  isactive: Boolean = true
+  selected: Boolean!
+  createdbyid: Int
+}
+
+input qualityscoreInput {
+  profileid: Int!
+  tinsplitid: Int!
+  qualityscore: Float
+}

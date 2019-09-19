@@ -1,0 +1,173 @@
+type Query{
+getmeasures(input:getmeasureinput):[measures]
+}
+
+input getmeasureinput{
+  profileid:Int!
+  tinsplitid:Int!
+  measuresetid: String!
+  calendarid:Int
+  selectedfirst:Boolean!
+  orderBy: MeasurePropertiesEnum
+  inactive: Boolean
+  # id: Float
+  # idIn: [Float]
+  # measureid: Float
+  # measureno: String
+  # measurenoIn: [String]
+  # measuredescription: String
+  # domaindescription: String
+  # parentmeasureid: Float
+  # system: Int
+  # cmsno: String
+  # ecqmno: String
+  # rational: String
+  # registrymeasureid: String
+  # displayname: String
+  # stratanumber: String
+  # stratasubnumber: String
+  # nqfmeasureno: String
+  # year: Int
+  # iscontinuous: Boolean
+  # iscrosscutting: Boolean
+  # isinverse: Boolean
+  # isriskadjust: Boolean
+  # ishighpriority: Boolean
+  # isoutcome: Boolean
+  # isregistry: Boolean
+  # ismips: Boolean
+  # istoppedout: Boolean
+  # ispatientspecific: Boolean
+  # isepisode: Boolean
+  # continuousobsmethod: String
+  # continuousvaluetype: String
+  # continuousvalueunits: String
+  # measureversion: String
+  # versionneutralidentifier: String
+  # versionnumber: String
+  # versionspecificidentifier: String
+  # benchmark: Float
+  # benchmarksd: Float
+  # listorder: Float
+  # type: String
+  # inactive: Boolean
+  # orderBy: MeasurePropertiesEnum
+  # orderByDesc: MeasurePropertiesEnum
+  # unit: String
+  # systemIn: [Int]
+  # systemNotIn: [Int]
+  # subtype: String
+  # subtypeIn: [String]
+  # subtypeNotIn: [String]
+  # typeIn: [String]
+  # typeNotIn: [String]
+  # priority: Int
+  # priorityIn: [Int]
+  # priorityNotIn: [Int]
+  # isprocess: Boolean
+  # filepath: String
+  # strataaveragetype: Float
+  # isstrata: Boolean
+}
+
+
+type measures{
+  id: String
+  measuredescription: String
+  domaindescription: String
+  parentmeasureid: String
+  system: Int
+  measureno: String
+  cmsno: String
+  ecqmno: String
+  rational: String
+  registrymeasureid: String
+  displayname: String
+  stratanumber: String
+  stratasubnumber: String
+  nqfmeasureno: String
+  year: Int
+  iscontinuous: Boolean
+  iscrosscutting: Boolean
+  isinverse: Boolean
+  isriskadjust: Boolean
+  ishighpriority: Boolean
+  isoutcome: Boolean
+  isregistry: Boolean
+  ismips: Boolean
+  istoppedout: Boolean
+  ispatientspecific: Boolean
+  isepisode: Boolean
+  continuousobsmethod: String
+  continuousvaluetype: String
+  continuousvalueunits: String
+  measureversion: String
+  versionneutralidentifier: String
+  versionnumber: String
+  versionspecificidentifier: String
+  benchmark: Float
+  benchmarksd: Float
+  listorder: Float
+  type: String
+  inactive: Boolean
+  IsFavorite: Boolean
+  unit: String
+  subtype: String
+  priority: Float
+  isprocess: Boolean
+  filepath: String
+  strataaveragetype: Float
+  isstrata: Boolean
+  isselected:Boolean
+  equivalentmeasure:String
+
+}
+
+enum MeasurePropertiesEnum {
+  id
+  measuredescription
+  domaindescription
+  parentmeasureid
+  system
+  measureno
+  cmsno
+  ecqmno
+  rational
+  registrymeasureid
+  displayname
+  stratanumber
+  stratasubnumber
+  nqfmeasureno
+  year
+  iscontinuous
+  iscrosscutting
+  isinverse
+  isriskadjust
+  ishighpriority
+  isoutcome
+  isregistry
+  ismips
+  istoppedout
+  ispatientspecific
+  isepisode
+  continuousobsmethod
+  continuousvaluetype
+  continuousvalueunits
+  measureversion
+  versionneutralidentifier
+  versionnumber
+  versionspecificidentifier
+  benchmark
+  benchmarksd
+  listorder
+  type
+  inactive
+  createdat
+  createdbyid
+  updatedat
+  updatedbyid
+  unit
+  subtype
+  priority
+  isprocess
+}

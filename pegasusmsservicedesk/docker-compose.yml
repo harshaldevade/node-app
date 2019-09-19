@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  servicedeskbs: 
+    image: servicedeskbs
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 7008:7008

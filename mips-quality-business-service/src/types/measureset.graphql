@@ -1,0 +1,49 @@
+scalar Object
+type Query {
+    measuresets(input:FilterMeasureSet):[Submission]    
+}
+
+type Submission{
+    id:Int
+    submissionkeyid:Int
+    measuresetid:Int 
+    measuresetuid:String    
+    unit:String
+    practicetype: Int    
+    name: String
+}
+
+input FilterMeasureSet {   
+    criteria: [MeasureSetCriteria],
+    orderBy: [MeasureSetOrderBy]
+    
+}
+
+input MeasureSetCriteria{
+    column: MeasureSetColumns!
+    """Comparision Operator"""
+    cop: COP!
+    """Logical Operator"""
+    lop: LOP
+    value: Object!
+}
+
+enum MeasureSetColumns
+{
+    id
+    submissionkeyid
+    measuresetid
+    measuresetuid
+    isactive
+    unit
+    practicetype
+    isformips
+    listorder
+    name
+
+}
+
+input MeasureSetOrderBy {
+	column: MeasureSetColumns!,
+	asc: Boolean = true
+}

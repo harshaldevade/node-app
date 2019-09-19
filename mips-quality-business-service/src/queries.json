@@ -1,0 +1,14 @@
+{
+    "reportingtype": {
+        "GetPracticesLegacy": {
+            "operationName": "",
+            "variables": {},
+            "query": "{\n  getPractices{{inputs}} {\n   externalid\n    uid\n    name\n  address\n  city\n   state\n   postalcode\n country\n}\n}\n"
+        },
+        "getMeasures": {
+            "operationName": "",
+            "variables": {},
+            "query": "{\n  getMeasures{{inputs}} {\n listorder\n    id\n    parentmeasureid\n    domaindescription\n    measureno\n    displayname\n    measuredescription\n    isinverse\n    IsFavorite\n    rational\n    cmsno\n    ispatientspecific\n    ishighpriority\n    isoutcome\n    isprocess\n    istoppedout\n    type\n    iscrosscutting\n    system\n    strataaveragetype\n    filepath\n\t}\n}\n"
+        }
+    }
+}

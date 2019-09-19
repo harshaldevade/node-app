@@ -1,0 +1,14 @@
+type Mutation {
+    update_submissiontype(input:SubmissionType!):Object
+}
+
+type Output {
+     id:String
+     type:String
+     reason:String
+}
+
+input SubmissionType {
+    tinsplitid : Int!
+    submissiontype: Int!
+}

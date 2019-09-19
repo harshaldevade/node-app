@@ -1,0 +1,11 @@
+type Mutation {
+    updatemeasureCollectionType(input: inputmeasureCollectionType):Object
+}
+
+input inputmeasureCollectionType {
+    tinsplitid:Int!
+    measuresetid:Int
+    measuresetuid:String
+}
+
+

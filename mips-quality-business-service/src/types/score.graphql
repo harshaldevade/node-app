@@ -1,0 +1,12 @@
+type Query {
+    quality_score(input:ScoreInput!):Object
+}
+
+input ScoreInput {
+    profileid:Int!
+    tinsplitid:Int!
+    submissionmethod:SubmissionMethods!
+    certified:Boolean!
+    isSmallPractice:Boolean!
+    profileonnpi:Boolean = false
+}

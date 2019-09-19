@@ -1,0 +1,47 @@
+{
+  "name": "mips-quality-business-service",
+  "version": "1.1.0",
+  "description": "MIPS Quality Business Service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "mocha **/*.test.js",
+    "test-watch": "nodemon --exec \" npm test \""
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://35.202.231.233:8082/mips-services/mips-profile-business-service.git"
+  },
+  "keywords": [
+    "MIPS",
+    "Profile",
+    "Business",
+    "Service",
+    "NodeJS",
+    "GraphQL",
+    "Yoga"
+  ],
+  "author": {
+    "name": "Ravindra Wagh",
+    "email": "ravindraw@figmd.com",
+    "phone": "+91 926 571 5267"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "circular-json": "^0.5.9",
+    "dotenv": "^7.0.0",
+    "expect": "^24.8.0",
+    "graphql-tools": "^4.0.4",
+    "graphql-yoga": "^1.17.4",
+    "json-parameterization": "^2.0.0",
+    "merge-graphql-schemas": "^1.5.8",
+    "mocha": "^6.1.4",
+    "moment": "^2.24.0",
+    "moment-range": "^4.0.2",
+    "node-fetch": "^2.3.0",
+    "supertest": "^4.0.2",
+    "uuid": "^3.3.2",
+    "validator": "^11.0.0"
+  }
+}

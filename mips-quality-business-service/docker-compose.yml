@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  measureds:
+    image: mips-quality-business-service
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 8002:8002
